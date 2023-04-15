@@ -22,9 +22,8 @@ def compare_patterns(regex_pattern, input_string):
     elif len(regex_pattern) > 1 and regex_pattern[1] == "*" and input_string:
         return compare_patterns(regex_pattern[2:], input_string) or compare_patterns(regex_pattern, input_string[1:])
     elif len(regex_pattern) > 1 and regex_pattern[1] == "+" and input_string:
-        return compare_patterns(regex_pattern[0] + regex_pattern[2:], input_string) or compare_patterns(regex_pattern,
-                                                                                                        input_string[
-                                                                                                       1:])
+        return return compare_patterns(regex_pattern[0] + regex_pattern[2:], input_string) \
+            or compare_patterns(regex_pattern, input_string[1:])
     elif not input_string or not compare_regex_to_input(regex_pattern[0], input_string[0]):
         return False
     else:
