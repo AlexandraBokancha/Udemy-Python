@@ -1,1 +1,1 @@
-# Python Projects Hyperskill Beginner Pro
+# Python Projects Hyperskill Beginner Core
